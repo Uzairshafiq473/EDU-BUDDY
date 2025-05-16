@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDU BUDDY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/images/avatar-removebg-.png">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="{{ character.avatar }}" alt="Ilm Sahi Avatar" class="avatar" onerror="this.onerror=null; this.src='/static/images/avatar.jpeg';">
+                <h2>{{ character.name }}</h2>
+                <p>{{ character.personality }}</p>
+            </div>
+            <div class="sidebar-menu">
+                <button class="menu-button" id="new-chat-btn">
+                    <i class="fas fa-plus"></i> New Chat
+                </button>
+                <button class="menu-button" id="quiz-btn">
+                    <i class="fas fa-question-circle"></i> Generate Quiz
+                </button>
+                <button class="menu-button" id="progress-btn">
+                    <i class="fas fa-chart-line"></i> My Progress
+                </button>
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-level">
+                    Level: Beginner
+                    <div class="level-indicator">
+                        <div class="level-progress" style="width: 10%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="chat-container" id="chat-container">
+                <div class="message bot-message">
+                    <div class="message-avatar">
+                        <img src="{{ character.avatar }}" alt="EDU BUDDY" onerror="this.onerror=null; this.src='/static/images/avatar.jpeg';">
+                    </div>
+                    <div class="message-content">
+                        <div class="message-sender">EDU BUDDY</div>
+                        <div class="message-text">{{ character.greeting }}</div>
+                        <div class="message-time">{{ now }}</div>
+                    </div>
+                </div>
+                {% for message in session.get('conversation_history', []) %}
+                    <div class="message user-message">
+                        <div class="message-avatar">
+                            <img src="/static/images/user-avatar.jpeg" alt="User">
+                        </div>
+                        <div class="message-content">
+                            <div class="message-sender">You</div>
+                            <div class="message-text">{{ message.user }}</div>
+                            <div class="message-time">{{ message.timestamp }}</div>
+                        </div>
+                    </div>
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <img src="{{ character.avatar }}" alt="EDU BUDDY" onerror="this.onerror=null; this.src='/static/images/avatar.jpeg';">
+                        </div>
+                        <div class="message-content">
+                            <div class="message-sender">EDU BUDDY</div>
+                            <div class="message-text">{{ message.bot | safe }}</div>
+                            <div class="message-time">{{ message.timestamp }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="suggestions-container" id="suggestions-container"></div>
+            <div class="input-area">
+                <form id="chat-form" method="POST" action="/">
+                    <div class="input-buttons">
+                        <button type="button" id="attach-btn"><i class="fas fa-paperclip"></i></button>
+                        <input type="file" id="file-input" name="file">
+                        <input type="text" id="user-input" name="user_input" placeholder="Type your question here..." required>
+                        <button type="button" id="mic-btn"><i class="fas fa-microphone"></i></button>
+                        <button type="submit" id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Quiz Modal -->
+    <div class="modal" id="quiz-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Quiz Generator</h2>
+            <div id="quiz-container"></div>
+        </div>
+    </div>
+    <!-- Progress Modal -->
+    <div class="modal" id="progress-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>My Learning Progress</h2>
+            <div id="progress-content"></div>
+        </div>
+    </div>
+    <!-- Hidden element to pass avatar path to script.js -->
+    <div id="bot-avatar-path" data-avatar="{{ character.avatar }}" style="display: none;"></div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
