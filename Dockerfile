@@ -1,6 +1,5 @@
 FROM python:3.10-slim
 
-# Install build tools for complex dependencies
 RUN apt-get update && apt-get install -y \
     gcc \
     python3-dev \
