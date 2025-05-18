@@ -1,0 +1,19 @@
+
+# EDU BUDDY
+
+EDU BUDDY ek AI-based educational web app hai jo students ko chat, quizzes, progress tracking, aur file uploads ke through learning mein help karta hai. Yeh Flask, SQLite, aur CrewAI ke sath bana hai.
+
+## Features
+- **Chat Interface**: AI se educational questions poochhein aur jawab paayein.
+- **Quiz Generation**: Topics par quizzes banayein aur apne knowledge ko test karein.
+- **Progress Tracking**: Apni learning progress ko monitor karein (average score, weak areas, recent topics).
+- **File Uploads**: PDFs, Word documents, ya text upload karke content analyze karayein.
+
+## Screenshot
+![EDU BUDDY Chat Interface](screenshots/chat-interface.png)
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Uzairshafiq473/EDU-BUDDY.git
+   cd EDU-BUDDY
