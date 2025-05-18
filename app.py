@@ -17,6 +17,7 @@ from litellm import RateLimitError
 from docx import Document
 import PyPDF2
 
+
 sys.stdout.reconfigure(encoding='utf-8')
 
 # Setup logging
@@ -50,6 +51,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 # Database setup
 def get_db_connection():
     try:
+       
         db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "student_data.db")
         conn = sqlite3.connect(db_path, check_same_thread=False)
         conn.row_factory = sqlite3.Row
@@ -270,7 +272,7 @@ def chat():
                 description=f"Find comprehensive information about: {user_input}. If needed, scrape relevant educational websites.",
                 agent=researcher,
                 expected_output="Detailed educational content with examples",
-                max_tokens=500
+                max_tokens=300
             )
             
             teach_task = Task(
