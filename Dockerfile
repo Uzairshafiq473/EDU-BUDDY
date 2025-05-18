@@ -1,9 +1,11 @@
 FROM python:3.10-slim
 
+# Install build tools and upgrade pip
 RUN apt-get update && apt-get install -y \
     gcc \
     python3-dev \
     && rm -rf /var/lib/apt/lists/*
+RUN pip install --upgrade pip
 
 WORKDIR /app
 COPY requirements.txt .
