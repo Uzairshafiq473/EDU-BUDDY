@@ -591,35 +591,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (progressModal) progressModal.style.display = 'none';
     }
 
-    function showBotLoader() {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = 'message bot-message bot-loader-message';
+    // Removed showBotLoader and vertical dots loader functionality
 
-        messageDiv.innerHTML = `
-            <div class="message-avatar">
-                <img src="${botAvatar}" alt="bot" onerror="this.onerror=null; this.src='/static/images/fallback-avatar.png';">
-            </div>
-            <div class="message-content">
-                <div class="message-sender">EDU BUDDY</div>
-                <div class="message-text">
-                    <div class="vertical-dots-loader">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                <div class="message-time"></div>
-            </div>
-        `;
-        chatContainer.appendChild(messageDiv);
-        chatContainer.scrollTop = chatContainer.scrollHeight;
-        return messageDiv;
-    }
-
-    // Jab API call start ho, loader show karo:
-    const loaderDiv = showBotLoader();
-
-    // Jab response mil jaye, loaderDiv ko remove karo ya replace karo bot ke actual message se:
-    if (loaderDiv) loaderDiv.remove();
+    // Loader functionality removed. Directly show bot response:
     addMessageToChat(botResponse, 'bot');
 });

@@ -1,3 +1,104 @@
+@media (max-width: 400px) {
+  .app-container, .main-content, .chat-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  .sidebar {
+    width: 100vw !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    display: block !important;
+    position: static !important;
+  }
+  .sidebar-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100vw !important;
+    padding: 10px 8px !important;
+    background: #fff !important;
+    box-shadow: 0 2px 8px #eee !important;
+    margin-bottom: 24px !important;
+    gap: 16px !important; /* Pehle 8px tha, ab zyada gap */
+  }
+  .avatar {
+    width: 36px !important;
+    height: 36px !important;
+    margin-right: 0 !important;
+    margin-bottom: 8px !important; /* gap se hi space milegi */
+  }
+  .message-content, .message-text {
+    max-width: 96vw !important;
+    font-size: 0.98rem !important;
+    padding: 8px 6px !important;
+  }
+  .input-area, .input-bar, .input-buttons {
+    padding: 4px 2px !important;
+    margin: 0 !important;
+    width: 100vw !important;
+    min-width: 0 !important;
+  }
+  #user-input {
+    font-size: 0.98rem !important;
+    padding: 8px 36px 8px 8px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .suggestions-container {
+    flex-direction: column;
+    gap: 6px;
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+  .suggestion-chip {
+    font-size: 0.9rem !important;
+    padding: 7px 8px !important;
+    width: 98vw !important;
+    box-sizing: border-box !important;
+  }
+}
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100vw !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    display: block !important;
+    position: static !important;
+  }
+  .sidebar-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100vw !important;
+    padding: 10px 8px !important;
+    background: #fff !important;
+    box-shadow: 0 2px 8px #eee !important;
+    margin-bottom: 0 !important;
+    gap: 8px !important; /* Space between avatar and buttons */
+  }
+  .avatar {
+    width: 36px !important;
+    height: 36px !important;
+    margin-right: 0 !important;
+    margin-bottom: 8px !important;
+  }
+}
 :root {
     --primary-color: #4f46e5;
     --secondary-color: #6366f1;
@@ -581,6 +682,42 @@ body {
     .input-buttons {
         gap: 5px; /* Added for better spacing */
     }
+}
+@media (max-width: 768px) {
+  .sidebar-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding-top: 18px !important;
+    padding-bottom: 10px !important;
+  }
+  .avatar {
+    width: 44px !important;
+    height: 44px !important;
+    margin-bottom: 8px !important;
+  }
+  .sidebar-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8px !important;
+    width: 100%;
+    justify-content: center;
+  }
+  .menu-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1rem !important; /* Show text */
+    gap: 6px !important;
+    padding: 8px 12px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .menu-button i {
+    font-size: 1.1rem !important;
+    margin-right: 5px !important;
+  }
 }
 .menu-button:focus, .submit-quiz:focus, .suggestion-chip:focus {
     outline: 2px solid var(--primary-color);

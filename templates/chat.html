@@ -14,19 +14,17 @@
         <div class="sidebar">
             <div class="sidebar-header">
                 <img src="{{ character.avatar }}" alt="Ilm Sahi Avatar" class="avatar" onerror="this.onerror=null; this.src='/static/images/avatar.jpeg';">
-                <h2>{{ character.name }}</h2>
-                <p>{{ character.personality }}</p>
-            </div>
-            <div class="sidebar-menu">
-                <button class="menu-button" id="new-chat-btn">
-                    <i class="fas fa-plus"></i> New Chat
-                </button>
-                <button class="menu-button" id="quiz-btn">
-                    <i class="fas fa-question-circle"></i> Generate Quiz
-                </button>
-                <button class="menu-button" id="progress-btn">
-                    <i class="fas fa-chart-line"></i> My Progress
-                </button>
+                <div class="sidebar-menu">
+                    <button class="menu-button" id="new-chat-btn">
+                        <i class="fas fa-plus"></i> New Chat
+                    </button>
+                    <button class="menu-button" id="quiz-btn">
+                        <i class="fas fa-question-circle"></i> Generate Quiz
+                    </button>
+                    <button class="menu-button" id="progress-btn">
+                        <i class="fas fa-chart-line"></i> My Progress
+                    </button>
+                </div>
             </div>
             <div class="sidebar-footer">
                 <div class="user-level">
@@ -105,11 +103,7 @@
     </div>
     <!-- Hidden element to pass avatar path to script.js -->
      <div id="bot-avatar-path" data-avatar="https://uzairshafiq473.github.io/EDU-BUDDY/static/images/avatar.jpeg"  style="display: none;"></div>
-    <div class="vertical-dots-loader">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+    
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
