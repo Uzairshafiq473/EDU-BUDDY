@@ -275,21 +275,18 @@ def chat():
                 max_tokens=300
             )
             
-            teach_task = Task(
-                description=f"""Explain this concept to a {session['level']} level student:
-                - Use simple language with examples
-                - Keep it engaging and interactive
-                - Provide practical applications
-                - Output in markdown format with headings and bullet points
-                Concept: {user_input}""",
+            teacher_task = Task(
+                description=f"""You are an expert teacher. Answer the following question in simple language for beginners. 
+Question: {user_input}
+Give your answer in markdown format with headings and bullet points if needed. Do NOT include any thoughts, reasoning steps, or instructions—just the answer.""",
                 agent=teacher,
-                expected_output="Well-structured educational explanation",
-                max_tokens=500
+                expected_output="Markdown answer only",
+                max_tokens=400
             )
             
             crew = Crew(
                 agents=[researcher, teacher],
-                tasks=[retrieve_task, teach_task],
+                tasks=[retrieve_task, teacher_task],
                 process=Process.sequential
             )
             
@@ -412,7 +409,7 @@ def generate_quiz():
                 extracted_topic = line.split("welcome to the world of")[-1].strip()
                 logging.info(f"Topic extracted from 'welcome to the world of ': {extracted_topic}")
                 break
-            elif "What is " in line:
+            elif "what is " in line:
                 extracted_topic = line.split("what is ")[-1].strip()
                 logging.info(f"Topic extracted from 'what is ': {extracted_topic}")
                 break
@@ -433,27 +430,31 @@ def generate_quiz():
 
         # Step 4: Generate quiz FROM THAT CONTENT
         quiz_task = Task(
-            description=f"""Create 5 MCQs BASED EXACTLY ON THIS CONTENT:
-            {content_output_str}
-            
-            STRICT RULES:
-            1. ONLY generate questions that can be answered from the content above
-            2. Each question must be 1 sentence (max 12 words)
-            3. Format EXACTLY like this:
-               [
-                 {{
-                   "question": "question text",
-                   "options": [
-                     {{"text": "option1", "correct": false}},
-                     {{"text": "option2", "correct": false}},
-                     {{"text": "option3", "correct": true}},
-                     {{"text": "option4", "correct": false}}
-                   ]
-                 }}
-               ]
-            4. NO true/false questions - use 4 distinct multiple-choice options
-            5. NO theory/explanations in output - ONLY pure JSON
-            6. Quiz title should be: "{extracted_topic} Quiz\"""",
+            description=f"""Given the following content, generate 10 MCQs. 
+CONTENT:
+{content_output_str}
+
+RULES:
+1. Each question MUST be answerable ONLY from the content above.
+2. Each question must be 1 sentence (max 12 words).
+3. Format output as a JSON array, like this:
+[
+  {{
+    "question": "What is Python?",
+    "options": [
+      {{"text": "A programming language", "correct": true}},
+      {{"text": "A fruit", "correct": false}},
+      {{"text": "A car", "correct": false}},
+      {{"text": "A city", "correct": false}}
+    ]
+  }},
+  ...
+]
+4. Do NOT add any explanation or extra text.
+5. If you cannot generate 10 questions from the content, generate as many as possible.
+
+Quiz title: "{extracted_topic} Quiz"
+""",
             agent=quiz_master,
             expected_output="JSON array of MCQ objects",
             max_tokens=300
@@ -487,7 +488,7 @@ def generate_quiz():
             raise Exception(f"Failed to parse quiz data: {str(e)}")
 
         clean_quiz = []
-        for q in quiz_data[:5]:
+        for q in quiz_data[:10]:  # Pehle 10 MCQs process karo
             if not isinstance(q, dict):
                 continue
             if not all(key in q for key in ["question", "options"]):
@@ -514,7 +515,7 @@ def generate_quiz():
 
         session["current_quiz"] = {
             "topic": f"{extracted_topic} Quiz",
-            "questions": clean_quiz[:5],
+            "questions": clean_quiz[:10],  # Pehle 10 MCQs save karo
             "sub_topics": sub_topics,
             "raw_topic": extracted_topic  # Sirf topic naam save
         }
@@ -535,6 +536,36 @@ def create_fallback_quiz(topic):
     return {  
         "topic": f"{base_topic} Quiz",
         "questions": [
+            {"question": f"What is {base_topic}'s main purpose?", "options": [
+                {"text": "A programming concept", "correct": True},
+                {"text": "A type of food", "correct": False},
+                {"text": "A musical instrument", "correct": False},
+                {"text": "A sports term", "correct": False}
+            ]},
+            {"question": f"How is {base_topic} primarily used?", "options": [
+                {"text": "For solving problems", "correct": True},
+                {"text": "For cooking food", "correct": False},
+                {"text": "For playing games", "correct": False},
+                {"text": "For building furniture", "correct": False}
+            ]},
+            {"question": f"What technology is {base_topic}?", "options": [
+                {"text": "Computer-related", "correct": True},
+                {"text": "Agricultural", "correct": False},
+                {"text": "Mechanical", "correct": False},
+                {"text": "Medical", "correct": False}
+            ]},
+            {"question": f"When was {base_topic} developed?", "options": [
+                {"text": "In the digital age", "correct": True},
+                {"text": "In ancient times", "correct": False},
+                {"text": "In medieval period", "correct": False},
+                {"text": "In prehistoric era", "correct": False}
+            ]},
+            {"question": f"Who uses {base_topic}?", "options": [
+                {"text": "Developers and engineers", "correct": True},
+                {"text": "Chefs and cooks", "correct": False},
+                {"text": "Musicians", "correct": False},
+                {"text": "Athletes", "correct": False}
+            ]},
             {"question": f"What is {base_topic}'s main purpose?", "options": [
                 {"text": "A programming concept", "correct": True},
                 {"text": "A type of food", "correct": False},

@@ -165,6 +165,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // Helper function: Typing effect for bot messages
+    function typeWriterEffect(text, element, speed = 18) {
+        let i = 0;
+        function typing() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typing, speed);
+            }
+        }
+        typing();
+    }
+
+    // Update: addMessageToChat to use typing effect for bot
     function addMessageToChat(message, sender) {
         if (!chatContainer) return;
 
@@ -181,13 +195,27 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <div class="message-content">
                 <div class="message-sender">${sender === 'bot' ? 'EDU BUDDY' : 'You'}</div>
-                <div class="message-text">${formatMessage(message)}</div>
+                <div class="message-text"></div>
                 <div class="message-time">${timeString}</div>
             </div>
         `;
 
         chatContainer.appendChild(messageDiv);
         chatContainer.scrollTop = chatContainer.scrollHeight;
+
+        const messageTextDiv = messageDiv.querySelector('.message-text');
+        const formatted = formatMessage(message);
+
+        if (sender === 'bot') {
+            // If formatted message contains HTML tags, show instantly (no typing effect)
+            if (/<[a-z][\s\S]*>/i.test(formatted)) {
+                messageTextDiv.innerHTML = formatted;
+            } else {
+                typeWriterEffect(formatted, messageTextDiv, 18);
+            }
+        } else {
+            messageTextDiv.textContent = message;
+        }
     }
 
     function formatMessage(message) {
@@ -562,4 +590,36 @@ document.addEventListener('DOMContentLoaded', function () {
         if (quizModal) quizModal.style.display = 'none';
         if (progressModal) progressModal.style.display = 'none';
     }
+
+    function showBotLoader() {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'message bot-message bot-loader-message';
+
+        messageDiv.innerHTML = `
+            <div class="message-avatar">
+                <img src="${botAvatar}" alt="bot" onerror="this.onerror=null; this.src='/static/images/fallback-avatar.png';">
+            </div>
+            <div class="message-content">
+                <div class="message-sender">EDU BUDDY</div>
+                <div class="message-text">
+                    <div class="vertical-dots-loader">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="message-time"></div>
+            </div>
+        `;
+        chatContainer.appendChild(messageDiv);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+        return messageDiv;
+    }
+
+    // Jab API call start ho, loader show karo:
+    const loaderDiv = showBotLoader();
+
+    // Jab response mil jaye, loaderDiv ko remove karo ya replace karo bot ke actual message se:
+    if (loaderDiv) loaderDiv.remove();
+    addMessageToChat(botResponse, 'bot');
 });

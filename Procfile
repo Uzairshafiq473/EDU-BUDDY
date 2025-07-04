@@ -1,0 +1,1 @@
+web: gunicorn EDU-BUDDY.app:app
