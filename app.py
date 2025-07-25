@@ -44,8 +44,7 @@ app.secret_key = flask_secret_key
 CORS(app, resources={r"/*": {"origins": ["https://uzairshafiq473.github.io", "http://localhost:5000"]}})
 
 # Configure upload folder
-UPLOAD_FOLDER = 'uploads'
-ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt', 'pptx'}
+UPLOAD_FOLDER = '/tmp/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
