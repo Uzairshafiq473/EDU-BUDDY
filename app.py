@@ -44,15 +44,14 @@ app.secret_key = flask_secret_key
 CORS(app, resources={r"/*": {"origins": ["https://uzairshafiq473.github.io", "http://localhost:5000"]}})
 
 # Configure upload folder
-UPLOAD_FOLDER = 'uploads'
-ALLOWED_EXTENSIONS = {'pdf', 'docx', 'txt', 'pptx'}
+UPLOAD_FOLDER = '/tmp/uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Database setup
 def get_db_connection():
     try:
-        db_path = os.getenv("DB_PATH", os.path.join(os.path.dirname(os.path.abspath(__file__)), "student_data.db"))
+        db_path = os.getenv("DB_PATH", "/tmp/student_data.db")
         conn = sqlite3.connect(db_path, check_same_thread=False)
         conn.row_factory = sqlite3.Row
         return conn
@@ -60,7 +59,6 @@ def get_db_connection():
         logging.error(f"Database connection error: {e}")
         print(f"Database connection error: {e}")
         return None
-    
 def clean_database():
     conn = get_db_connection()
     if conn:
@@ -842,6 +840,8 @@ import os
 if __name__ == '__main__':
     logging.info("Starting Flask application")
     clean_database()
-    # Use environment variable PORT or default to 8000
     port = int(os.getenv("PORT", 8000))
     app.run(host="0.0.0.0", port=port, debug=False)
+else:
+    # For Vercel
+    application = app

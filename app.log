@@ -747,3 +747,531 @@ LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
 2025-07-04 21:54:51,738 - INFO - Database connection closed
 2025-07-04 21:54:51,738 - INFO - Progress data returned: {'total_quizzes': 1, 'average_score': 10.0, 'weak_areas': ['python?**'], 'recent_topics': ['python?**'], 'quiz_history': [{'topic': 'python?**', 'score': 10, 'weak_area': 'python?**', 'timestamp': '2025-07-04 16:54:39'}], 'new_topics': ['python?**']}
 2025-07-04 21:54:51,739 - INFO - 127.0.0.1 - - [04/Jul/2025 21:54:51] "GET /progress HTTP/1.1" 200 -
+2025-07-05 15:00:24,970 - INFO - 127.0.0.1 - - [05/Jul/2025 15:00:24] "GET / HTTP/1.1" 200 -
+2025-07-05 15:00:25,173 - INFO - 127.0.0.1 - - [05/Jul/2025 15:00:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-05 15:00:25,300 - INFO - 127.0.0.1 - - [05/Jul/2025 15:00:25] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-05 15:00:25,425 - INFO - 127.0.0.1 - - [05/Jul/2025 15:00:25] "[36mGET /static/images/avatar.jpeg HTTP/1.1[0m" 304 -
+2025-07-05 15:00:27,030 - INFO - 127.0.0.1 - - [05/Jul/2025 15:00:27] "[36mGET /static/images/avatar-removebg-.png HTTP/1.1[0m" 304 -
+2025-07-05 15:00:27,408 - INFO - 127.0.0.1 - - [05/Jul/2025 15:00:27] "[36mGET /static/images/avatar-removebg-.png HTTP/1.1[0m" 304 -
+2025-07-05 15:01:17,819 - INFO - 127.0.0.1 - - [05/Jul/2025 15:01:17] "[36mGET /static/images/user-avatar.jpeg HTTP/1.1[0m" 304 -
+2025-07-05 15:01:18,443 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:01:21,868 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:01:21,892 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:01:21,913 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:01:21,913 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:01:22,052 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:01:23,128 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:01:25,094 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:01:25,141 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:01:25,142 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:01:25,142 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:01:25,159 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:01:25,275 - INFO - Successfully executed Crew task on attempt 1
+2025-07-05 15:01:25,627 - INFO - Conversation stored for student_id: user_1751644243.923593
+2025-07-05 15:01:25,628 - INFO - Chat response generated for user_input: what is bitcoin ?
+2025-07-05 15:01:25,631 - INFO - 127.0.0.1 - - [05/Jul/2025 15:01:25] "POST / HTTP/1.1" 200 -
+2025-07-05 15:02:02,414 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:02] "GET / HTTP/1.1" 200 -
+2025-07-05 15:02:02,503 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-07-05 15:02:02,521 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:02] "[36mGET /static/images/avatar.jpeg HTTP/1.1[0m" 304 -
+2025-07-05 15:02:02,563 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:02] "[36mGET /static/js/script.js HTTP/1.1[0m" 304 -
+2025-07-05 15:02:03,271 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:03] "[36mGET /static/images/avatar-removebg-.png HTTP/1.1[0m" 304 -
+2025-07-05 15:02:03,324 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:03] "[36mGET /static/images/avatar-removebg-.png HTTP/1.1[0m" 304 -
+2025-07-05 15:02:20,687 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:20] "[36mGET /static/images/user-avatar.jpeg HTTP/1.1[0m" 304 -
+2025-07-05 15:02:20,765 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:02:25,277 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:02:25,280 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:02:25,281 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:25,281 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:25,287 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:25,486 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:02:27,680 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:02:27,684 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:02:27,685 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:27,685 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:27,692 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:27,863 - INFO - Successfully executed Crew task on attempt 1
+2025-07-05 15:02:27,962 - INFO - Conversation stored for student_id: user_1751644243.923593
+2025-07-05 15:02:27,962 - INFO - Chat response generated for user_input: what is html ?
+2025-07-05 15:02:27,963 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:27] "POST / HTTP/1.1" 200 -
+2025-07-05 15:02:28,062 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:28] "[33mGET /audio.mp3 HTTP/1.1[0m" 404 -
+2025-07-05 15:02:28,067 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:28] "[33mGET /video.mp4 HTTP/1.1[0m" 404 -
+2025-07-05 15:02:49,249 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:02:51,882 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:02:51,884 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:02:51,892 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:51,893 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:51,912 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:52,058 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:02:53,532 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:02:53,534 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:02:53,538 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:53,538 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:53,556 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:02:53,667 - INFO - Successfully executed Crew task on attempt 1
+2025-07-05 15:02:53,713 - INFO - Conversation stored for student_id: user_1751644243.923593
+2025-07-05 15:02:53,713 - INFO - Chat response generated for user_input: Tell me more about what is html ?
+2025-07-05 15:02:53,717 - INFO - 127.0.0.1 - - [05/Jul/2025 15:02:53] "POST / HTTP/1.1" 200 -
+2025-07-05 15:03:07,511 - INFO - Generating content for initial topic: Final AnswerWhat is HTML?HTML stands for HyperText Markup Language. It is a standard markup language used to create web pages and web applications.History of HTMLHTML was first introduced in 1993 by Tim Berners-Lee, a British computer scientist.The first version of HTML was called HTML 1.0.Since then, there have been several updates to HTML, with the latest version being HTML 5.Benefits of HTMLHTML is easy to learn and use.It is a markup language, not a programming language, so it can be easily read and written by humans.HTML documents can be displayed in any web browser, making it a universal language.HTML is used by most websites and web applications.Basic Structure of HTMLAn HTML document starts with an <!DOCTYPE html> declaration.The basic structure of an HTML document consists of:head: contains metadata about the document, such as the title and charset.body: contains the content of the document.html: contains the head and body sections.Basic Elements of HTMLTags: HTML elements are represented by tags, which are surrounded by angle brackets <>.Elements can be nested inside other elements.Common HTML elements include:p: paragraphh1-h6: headingsimg: imagea: anchorul, ol, li: listsCommon Use Cases for HTMLCreating web pagesCreating web applicationsCreating mobile applicationsCreating e-books and digital publicationsReferences and PracticeW3SchoolsMDN Web DocsHTML Tutorial by Tutorials PointCommon HTML Tagshtml: the root element of an HTML document.head: contains metadata about the document.title: the title of the document.body: contains the content of the document.p: paragraphh1-h6: headingsimg: imagea: anchorul, ol, li: listsThis is a basic overview of HTML. With practice, you can learn more about HTML and create amazing web pages and web applications.
+2025-07-05 15:03:07,621 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:03:09,512 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:03:09,515 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:03:09,518 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:09,518 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:09,522 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:09,556 - INFO - Successfully executed Crew task on attempt 1
+2025-07-05 15:03:09,556 - INFO - Generated content: Thought: I now can give a great answer
+2025-07-05 15:03:09,556 - INFO - Final extracted topic from content: Final AnswerWhat
+2025-07-05 15:03:09,556 - INFO - Extracted sub-topics: []
+2025-07-05 15:03:09,613 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:03:10,351 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:03:10,353 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:03:10,354 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:10,354 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:10,405 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:10,438 - INFO - Successfully executed Crew task on attempt 1
+2025-07-05 15:03:10,438 - INFO - Raw quiz output: [
+  {
+    "question": "What is thought about to give after answering",
+    "options": [
+      {"text": "A plan", "correct": false},
+      {"text": "A great answer", "correct": true},
+      {"text": "An idea", "correct": false},
+      {"text": "A strategy", "correct": false}
+    ]
+  },
+  {
+    "question": "What is given after providing the best attempt",
+    "options": [
+      {"text": "A summary", "correct": false},
+      {"text": "A great answer", "correct": true},
+      {"text": "An opinion", "correct": false},
+      {"text": "A judgment", "correct": false}
+    ]
+  },
+  {
+    "question": "What is the personal goal described as",
+    "options": [
+      {"text": "To make a decision", "correct": false},
+      {"text": "To achieve a result", "correct": false},
+      {"text": "To create engaging quizzes", "correct": true},
+      {"text": "To test knowledge", "correct": false}
+    ]
+  }
+]
+2025-07-05 15:03:10,441 - INFO - Quiz generated successfully for topic: Final AnswerWhat
+2025-07-05 15:03:10,446 - INFO - 127.0.0.1 - - [05/Jul/2025 15:03:10] "POST /generate_quiz HTTP/1.1" 200 -
+2025-07-05 15:03:17,975 - INFO - Generating content for initial topic: Final AnswerWhat is HTML?HTML stands for HyperText Markup Language. It is a standard markup language used to create web pages and web applications.History of HTMLHTML was first introduced in 1993 by Tim Berners-Lee, a British computer scientist.The first version of HTML was called HTML 1.0.Since then, there have been several updates to HTML, with the latest version being HTML 5.Benefits of HTMLHTML is easy to learn and use.It is a markup language, not a programming language, so it can be easily read and written by humans.HTML documents can be displayed in any web browser, making it a universal language.HTML is used by most websites and web applications.Basic Structure of HTMLAn HTML document starts with an <!DOCTYPE html> declaration.The basic structure of an HTML document consists of:head: contains metadata about the document, such as the title and charset.body: contains the content of the document.html: contains the head and body sections.Basic Elements of HTMLTags: HTML elements are represented by tags, which are surrounded by angle brackets <>.Elements can be nested inside other elements.Common HTML elements include:p: paragraphh1-h6: headingsimg: imagea: anchorul, ol, li: listsCommon Use Cases for HTMLCreating web pagesCreating web applicationsCreating mobile applicationsCreating e-books and digital publicationsReferences and PracticeW3SchoolsMDN Web DocsHTML Tutorial by Tutorials PointCommon HTML Tagshtml: the root element of an HTML document.head: contains metadata about the document.title: the title of the document.body: contains the content of the document.p: paragraphh1-h6: headingsimg: imagea: anchorul, ol, li: listsThis is a basic overview of HTML. With practice, you can learn more about HTML and create amazing web pages and web applications.
+2025-07-05 15:03:18,059 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:03:18,284 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:03:18,285 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:03:18,286 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:18,286 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:18,291 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:18,333 - INFO - Successfully executed Crew task on attempt 1
+2025-07-05 15:03:18,333 - INFO - Generated content: Thought: I now can give a great answer
+2025-07-05 15:03:18,334 - INFO - Final extracted topic from content: Final AnswerWhat
+2025-07-05 15:03:18,334 - INFO - Extracted sub-topics: []
+2025-07-05 15:03:18,403 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:03:19,632 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:03:19,633 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:03:19,676 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:19,677 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:19,824 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:20,403 - INFO - Successfully executed Crew task on attempt 1
+2025-07-05 15:03:20,404 - INFO - Raw quiz output: [
+  {
+    "question": "Given the content, thought is mentioned first.",
+    "options": [
+      {"text": "A correct statement", "correct": true},
+      {"text": "A question type", "correct": false},
+      {"text": "A chapter in a book", "correct": false},
+      {"text": "A movie genre", "correct": false}
+    ]
+  },
+  {
+    "question": "What can be inferred about 'I now can'?",
+    "options": [
+      {"text": "A confident statement", "correct": true},
+      {"text": "A nervous statement", "correct": false},
+      {"text": "A sad statement", "correct": false},
+      {"text": "A happy statement", "correct": false}
+    ]
+  },
+  {
+    "question": "Is 'give a great answer' related to a goal?",
+    "options": [
+      {"text": "Yes, it is", "correct": true},
+      {"text": "No, it is not", "correct": false},
+      {"text": "Maybe", "correct": false},
+      {"text": "Definitely", "correct": false}
+    ]
+  },
+  {
+    "question": "Is the thought related to knowledge?",
+    "options": [
+      {"text": "Yes, it is", "correct": true},
+      {"text": "No, it is not", "correct": false},
+      {"text": "Maybe", "correct": false},
+      {"text": "Definitely", "correct": false}
+    ]
+  },
+  {
+    "question": "Is there a mention of the job depending on the answer?",
+    "options": [
+      {"text": "Yes, it does", "correct": true},
+      {"text": "No, it does not", "correct": false},
+      {"text": "Maybe", "correct": false},
+      {"text": "Definitely", "correct": false}
+    ]
+  },
+  {
+    "question": "Does the content mention the importance of the answer?",
+    "options": [
+      {"text": "Yes, it does", "correct": true},
+      {"text": "No, it does not", "correct": false},
+      {"text": "Maybe", "correct": false},
+      {"text": "Definitely", "correct": false}
+    ]
+  },
+  {
+    "question": "Is 'Final Answer' mentioned in the task?",
+    "options": [
+      {"text": "Yes, it is", "correct": true},
+      {"text": "No, it is not", "correct": false},
+      {"text": "Maybe", "correct": false},
+      {"text": "Definitely", "correct": false}
+    ]
+  },
+  {
+    "question": "Is the content mentioning a specific task?",
+    "options": [
+      {"text": "Yes, it does", "correct": true},
+      {"text": "No, it does not", "correct": false},
+      {"text": "Maybe", "correct": false},
+      {"text": "Definitely", "correct": false}
+    ]
+  },
+  {
+    "question": "Is the job depending on generating quizzes?",
+    "options": [
+      {"text": "Yes, it is", "correct": true},
+      {"text": "No, it is not", "correct": false},
+      {"text": "Maybe", "correct": false},
+      {"text": "Definitely", "correct": false}
+    ]
+  },
+  {
+    "question": "Is generating 10 MCQs from the content a requirement?",
+    "options": [
+      {"text": "Yes, it is", "correct": true},
+      {"text": "No, it is not", "correct": false},
+      {"text": "Maybe", "correct": false},
+      {"text": "Definitely", "correct": false}
+    ]
+  }
+]
+2025-07-05 15:03:20,405 - INFO - Quiz generated successfully for topic: Final AnswerWhat
+2025-07-05 15:03:20,407 - INFO - 127.0.0.1 - - [05/Jul/2025 15:03:20] "POST /generate_quiz HTTP/1.1" 200 -
+2025-07-05 15:03:34,167 - INFO - Cleaned quizzes: [{'topic': 'python?**', 'score': 10, 'weak_area': 'python?**', 'timestamp': '2025-07-04 16:54:39'}]
+2025-07-05 15:03:34,167 - INFO - Cleaned new topics: [{'topic': 'python?**', 'start_date': '2025-07-04 21:54:39'}]
+2025-07-05 15:03:34,167 - INFO - Database connection closed
+2025-07-05 15:03:34,167 - INFO - Progress data returned: {'total_quizzes': 1, 'average_score': 10.0, 'weak_areas': ['python?**'], 'recent_topics': ['python?**'], 'quiz_history': [{'topic': 'python?**', 'score': 10, 'weak_area': 'python?**', 'timestamp': '2025-07-04 16:54:39'}], 'new_topics': ['python?**']}
+2025-07-05 15:03:34,168 - INFO - 127.0.0.1 - - [05/Jul/2025 15:03:34] "GET /progress HTTP/1.1" 200 -
+2025-07-05 15:03:50,931 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:03:53,627 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:03:53,638 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:03:53,640 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:53,642 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:53,659 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:53,829 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:03:55,296 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:03:55,297 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:03:55,298 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:55,298 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:55,317 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:03:55,409 - INFO - Successfully executed Crew task on attempt 1
+2025-07-05 15:03:55,435 - INFO - Conversation stored for student_id: user_1751644243.923593
+2025-07-05 15:03:55,435 - INFO - Chat response generated for user_input: what is bitcoin ?
+2025-07-05 15:03:55,438 - INFO - 127.0.0.1 - - [05/Jul/2025 15:03:55] "POST / HTTP/1.1" 200 -
+2025-07-05 15:04:01,899 - INFO - Generating content for initial topic: What is Bitcoin?Bitcoin (BTC) is a decentralized digital currency that enables instant, peer-to-peer transactions without the need for intermediaries like banks. It was created in 2008 by an anonymous individual or group of individuals using the pseudonym Satoshi Nakamoto. The Bitcoin network is maintained by a global community of computers (nodes) that work together to validate and record transactions on a public ledger called the blockchain.Key Features of BitcoinDecentralized: Bitcoin is not controlled by any government, institution, or individual. The network is maintained by a global community of nodes that work together to validate and record transactions.Digital: Bitcoin is a digital currency that exists only in electronic form.Limited supply: There will only ever be 21 million Bitcoins in existence, which helps to prevent inflation and maintain the value of each coin.Public ledger: The blockchain is a public ledger that records all Bitcoin transactions, ensuring transparency and accountability.Security: Bitcoin transactions are secure due to the use of advanced cryptography and a decentralized network.How does Bitcoin work?Transaction Process:A user sends a transaction request: A user initiates a transaction by sending a request to the Bitcoin network.Transaction validation: The transaction is verified by nodes on the network using complex algorithms to ensure that the sender has the necessary funds and that the transaction is legitimate.Transaction confirmation: The transaction is then broadcast to the network, where it is verified by multiple nodes before being added to the blockchain.Block creation: Transactions are grouped into blocks, which are added to the blockchain in sequential order.Blockchain update: The blockchain is updated on each node to reflect the new block of transactions.Types of Bitcoin TransactionsP2P (Peer-to-Peer) transactions: Direct transactions between two individuals or entities.Exchanges: Transactions between individuals or entities and a central exchange, such as Coinbase or Binance.OTC (Over-the-Counter) transactions: Transactions made between two parties without involving an exchange.Bitcoin Address and WalletsA Bitcoin address is a unique identifier that allows users to receive Bitcoin. There are several types of wallets, including:Software wallets: Installed on a computer or mobile device, these wallets allow users to store, send, and receive Bitcoins.Hardware wallets: Physical devices that securely store Bitcoins offline, protecting them from hacking and theft.Paper wallets: Physical documents that store a user's Bitcoin private key, allowing them to access their Bitcoins offline.Security MeasuresPublic-Private Key: Each Bitcoin address has a corresponding private key, which is used to authorize transactions.Encryption: Bitcoins are encrypted using advanced cryptographic algorithms, such as AES (Advanced Encryption Standard).Cold storage: Bitcoins can be stored offline in a cold storage solution, such as a hardware wallet, to protect them from hacking and theft.MiningMining is the process by which new Bitcoins are created and transactions are validated. Miners use powerful computers to solve complex mathematical problems, which verifies the transactions and adds them to the blockchain. In return, miners are rewarded with newly minted Bitcoins and transaction fees.Investing in BitcoinInvestors can buy, sell, or trade Bitcoins on various exchanges, such as Coinbase, Binance, or Kraken. It's essential to understand the risks associated with investing in Bitcoin, including market volatility, hacking, and regulatory changes.ConclusionBitcoin is a revolutionary digital currency that has disrupted traditional financial systems. Its decentralized, secure, and transparent nature has made it an attractive option for individuals and businesses alike. However, it's essential to understand the risks associated with investing in Bitcoin and to use trusted sources to ensure the accuracy and credibility of the information.
+2025-07-05 15:04:02,097 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:04:03,363 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:04:03,365 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:04:03,366 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:04:03,366 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:04:03,392 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:04:03,497 - INFO - Successfully executed Crew task on attempt 1
+2025-07-05 15:04:03,498 - INFO - Generated content: Thought: I now can give a great answer
+
+**What is Bitcoin?**
+===============
+
+**An Overview of Bitcoin**
+------------------------
+
+Bitcoin (BTC) is a decentralized digital currency that enables instant, peer-to-peer transactions without the need for intermediaries like banks. It was created in 2008 by an anonymous individual or group of individuals using the pseudonym Satoshi Nakamoto. The Bitcoin network is maintained by a global community of computers (nodes) that work together to validate and record transactions on a public ledger called the blockchain.
+
+**Key Features of Bitcoin**
+-------------------------
+
+### Decentralized
+
+Bitcoin is not controlled by any government, institution, or individual. The network is maintained by a global community of nodes that work together to validate and record transactions.
+
+### Digital
+
+Bitcoin is a digital currency that exists only in electronic form.
+
+### Limited Supply
+
+There will only ever be 21 million Bitcoins in existence, which helps to prevent inflation and maintain the value of each coin.
+
+### Public Ledger
+
+The blockchain is a public ledger that records all Bitcoin transactions, ensuring transparency and accountability.
+
+### Security
+
+Bitcoin transactions are secure due to the use of advanced cryptography and a decentralized network.
+
+**How Bitcoin Works**
+---------------------
+
+### Transaction Process
+
+#### A user sends a transaction request
+
+A user initiates a transaction by sending a request to the Bitcoin network.
+
+#### Transaction validation
+
+The transaction is verified by nodes on the network using complex algorithms to ensure that the sender has the necessary funds and that the transaction is legitimate.
+
+#### Transaction confirmation
+
+The transaction is then broadcast to the network, where it is verified by multiple nodes before being added to the blockchain.
+
+#### Block creation
+
+Transactions are grouped into blocks, which are added to the blockchain in sequential order.
+
+#### Blockchain update
+
+The blockchain is updated on each node to reflect the new block of transactions.
+
+**Types of Bitcoin Transactions**
+-------------------------------
+
+### P2P (Peer-to-Peer) transactions
+
+Direct transactions between two individuals or entities.
+
+### Exchanges
+
+Transactions between individuals or entities and a central exchange, such as Coinbase or Binance.
+
+### OTC (Over-the-Counter) transactions
+
+Transactions made between two parties without involving an exchange.
+
+**Bitcoin Address and Wallets**
+------------------------------
+
+### Bitcoin Address
+
+A Bitcoin address is a unique identifier that allows users to receive Bitcoin.
+
+### Types of Wallets
+
+### Software wallets
+
+Installed on a computer or mobile device, these wallets allow users to store, send, and receive Bitcoins.
+
+### Hardware wallets
+
+Physical devices that securely store Bitcoins offline, protecting them from hacking and theft.
+
+### Paper wallets
+
+Physical documents that store a user's Bitcoin private key, allowing them to access their Bitcoins offline.
+
+**Security Measures**
+------------------
+
+### Public-Private Key
+
+Each Bitcoin address has a corresponding private key, which is used to authorize transactions.
+
+### Encryption
+
+Bitcoins are encrypted using advanced cryptographic algorithms, such as AES (Advanced Encryption Standard).
+
+### Cold storage
+
+Bitcoins can be stored offline in a cold storage solution, such as a hardware wallet, to protect them from hacking and theft.
+
+**Mining**
+---------
+
+Mining is the process by which new Bitcoins are created and transactions are validated. Miners use powerful computers to solve complex mathematical problems, which verifies the transactions and adds them to the blockchain. In return, miners are rewarded with newly minted Bitcoins and transaction fees.
+
+**Investing in Bitcoin**
+-----------------------
+
+Investors can buy, sell, or trade Bitcoins on various exchanges, such as Coinbase, Binance, or Kraken. It's essential to understand the risks associated with investing in Bitcoin, including market volatility, hacking, and regulatory changes.
+
+**Conclusion**
+----------
+
+Bitcoin is a revolutionary digital currency that has disrupted traditional financial systems. Its decentralized, secure, and transparent nature has made it an attractive option for individuals and businesses alike. However, it's essential to understand the risks associated with investing in Bitcoin and to use trusted sources to ensure the accuracy and credibility of the information.
+2025-07-05 15:04:03,498 - INFO - Topic extracted from 'what is ': bitcoin?**
+2025-07-05 15:04:03,498 - INFO - Final extracted topic from content: bitcoin?**
+2025-07-05 15:04:03,499 - INFO - Extracted sub-topics: []
+2025-07-05 15:04:03,664 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:04:03,744 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-05 15:04:04,369 - ERROR - LiteLLM call failed: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jpznanr9fh8vfnx87hach0xz` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5134, Requested 1490. Please try again in 6.238s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-07-05 15:04:04,382 - WARNING - Rate limit error on attempt 1. Waiting 3 seconds. Error: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jpznanr9fh8vfnx87hach0xz` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 5134, Requested 1490. Please try again in 6.238s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-07-05 15:04:07,613 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:04:07,718 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-07-05 15:04:07,763 - ERROR - LiteLLM call failed: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jpznanr9fh8vfnx87hach0xz` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4739, Requested 1490. Please try again in 2.282s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-07-05 15:04:07,814 - WARNING - Rate limit error on attempt 2. Waiting 3 seconds. Error: litellm.RateLimitError: RateLimitError: GroqException - {"error":{"message":"Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01jpznanr9fh8vfnx87hach0xz` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4739, Requested 1490. Please try again in 2.282s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+2025-07-05 15:04:10,964 - INFO - 
+LiteLLM completion() model= llama-3.1-8b-instant; provider = groq
+2025-07-05 15:04:12,381 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-05 15:04:12,383 - INFO - Wrapper: Completed Call, calling success_handler
+2025-07-05 15:04:12,384 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:04:12,385 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:04:12,413 - INFO - selected model name for cost calculation: groq/llama-3.1-8b-instant
+2025-07-05 15:04:12,540 - INFO - Successfully executed Crew task on attempt 3
+2025-07-05 15:04:12,541 - INFO - Raw quiz output: [
+  {
+    "question": "Who created Bitcoin?",
+    "options": [
+      {"text": "Satoshi Nakamoto", "correct": true},
+      {"text": "Alan Turing", "correct": false},
+      {"text": "Elon Musk", "correct": false},
+      {"text": "Mark Zuckerberg", "correct": false}
+    ]
+  },
+  {
+    "question": "What is the maximum supply of Bitcoins?",
+    "options": [
+      {"text": "10 million", "correct": false},
+      {"text": "100 million", "correct": false},
+      {"text": "21 million", "correct": true},
+      {"text": "50 million", "correct": false}
+    ]
+  },
+  {
+    "question": "How are Bitcoin transactions secured?",
+    "options": [
+      {"text": "Using a central authority", "correct": false},
+      {"text": "Using advanced cryptography and a decentralized network", "correct": true},
+      {"text": "Using a public ledger", "correct": false},
+      {"text": "Using cold storage", "correct": false}
+    ]
+  },
+  {
+    "question": "What is a Bitcoin address?",
+    "options": [
+      {"text": "A unique identifier that allows users to receive Bitcoins", "correct": true},
+      {"text": "A type of wallet", "correct": false},
+      {"text": "A mining device", "correct": false},
+      {"text": "A payment processor", "correct": false}
+    ]
+  },
+  {
+    "question": "What is the purpose of mining in Bitcoin?",
+    "options": [
+      {"text": "To validate transactions and add them to the blockchain, and to create new Bitcoins", "correct": true},
+      {"text": "To invest in Bitcoin", "correct": false},
+      {"text": "To create new wallets", "correct": false},
+      {"text": "To store Bitcoins offline", "correct": false}
+    ]
+  },
+  {
+    "question": "Where can investors buy, sell, or trade Bitcoins?",
+    "options": [
+      {"text": "On various exchanges, such as Coinbase, Binance, or Kraken", "correct": true},
+      {"text": "On a central authority's website", "correct": false},
+      {"text": "On a public ledger", "correct": false},
+      {"text": "In a physical store", "correct": false}
+    ]
+  },
+  {
+    "question": "What is a type of wallet that stores Bitcoins offline?",
+    "options": [
+      {"text": "A software wallet", "correct": false},
+      {"text": "A hardware wallet", "correct": true},
+      {"text": "A paper wallet", "correct": true},
+      {"text": "None of the above", "correct": false}
+    ]
+  },
+  {
+    "question": "What is a way to protect Bitcoins from hacking and theft?",
+    "options": [
+      {"text": "Using encryption", "correct": true},
+      {"text": "Using a public ledger", "correct": false},
+      {"text": "Using cold storage", "correct": true},
+      {"text": "Using a central authority", "correct": false}
+    ]
+  },
+  {
+    "question": "What is the process by which new Bitcoins are created and transactions are validated?",
+    "options": [
+      {"text": "Mining", "correct": true},
+      {"text": "Investing", "correct": false},
+      {"text": "Trading", "correct": false},
+      {"text": "Walleting", "correct": false}
+    ]
+  },
+  {
+    "question": "How many million Bitcoins will there be in existence?",
+    "options": [
+      {"text": "10", "correct": false},
+      {"text": "21", "correct": true},
+      {"text": "50", "correct": false},
+      {"text": "100", "correct": false}
+    ]
+  },
+  {
+    "question": "Why is it important to use trusted sources when investing in Bitcoin?",
+    "options": [
+      {"text": "To ensure the accuracy and credibility of the information", "correct": true},
+      {"text": "To reduce the risk of investing in Bitcoin", "correct": true},
+      {"text": "To increase the supply of Bitcoins", "correct": false},
+      {"text": "To create new wallets", "correct": false}
+    ]
+  }
+]
+2025-07-05 15:04:12,542 - INFO - Quiz generated successfully for topic: bitcoin?**
+2025-07-05 15:04:12,546 - INFO - 127.0.0.1 - - [05/Jul/2025 15:04:12] "POST /generate_quiz HTTP/1.1" 200 -
+2025-07-05 15:04:42,608 - INFO - Topic in submit_quiz: bitcoin?**
+2025-07-05 15:04:42,608 - INFO - Score: 30, Weak Area: bitcoin?**, Topic: bitcoin?**
+2025-07-05 15:04:42,616 - INFO - Topic 'bitcoin?**' saved to user_topics for user_id: user_1751644243.923593
+2025-07-05 15:04:42,632 - INFO - 127.0.0.1 - - [05/Jul/2025 15:04:42] "POST /submit_quiz HTTP/1.1" 200 -
+2025-07-05 15:04:57,523 - INFO - Cleaned quizzes: [{'topic': 'bitcoin?**', 'score': 30, 'weak_area': 'bitcoin?**', 'timestamp': '2025-07-05 10:04:42'}, {'topic': 'python?**', 'score': 10, 'weak_area': 'python?**', 'timestamp': '2025-07-04 16:54:39'}]
+2025-07-05 15:04:57,523 - INFO - Cleaned new topics: [{'topic': 'bitcoin?**', 'start_date': '2025-07-05 15:04:42'}, {'topic': 'python?**', 'start_date': '2025-07-04 21:54:39'}]
+2025-07-05 15:04:57,523 - INFO - Database connection closed
+2025-07-05 15:04:57,524 - INFO - Progress data returned: {'total_quizzes': 2, 'average_score': 20.0, 'weak_areas': ['python?**', 'bitcoin?**'], 'recent_topics': ['bitcoin?**', 'python?**'], 'quiz_history': [{'topic': 'bitcoin?**', 'score': 30, 'weak_area': 'bitcoin?**', 'timestamp': '2025-07-05 10:04:42'}, {'topic': 'python?**', 'score': 10, 'weak_area': 'python?**', 'timestamp': '2025-07-04 16:54:39'}], 'new_topics': ['bitcoin?**', 'python?**']}
+2025-07-05 15:04:57,525 - INFO - 127.0.0.1 - - [05/Jul/2025 15:04:57] "GET /progress HTTP/1.1" 200 -
+2025-07-05 16:13:02,599 - INFO - 127.0.0.1 - - [05/Jul/2025 16:13:02] "GET / HTTP/1.1" 200 -
